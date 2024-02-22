@@ -12,7 +12,7 @@
     background-size: cover;
     background-position: center;
     background-color: #191919;
-    
+
 
 }
 
@@ -98,7 +98,7 @@ section img {
     filter: drop-shadow(0 0 10px #fff);
     max-width: 100%;
     height: auto;
-    
+
 
 }
 
@@ -145,7 +145,7 @@ section button:hover {
     padding-top: 80px;
     padding-top: 65px;
     font-family: "Shantell Sans", cursive;
-    
+
 
 
 }
@@ -155,7 +155,7 @@ section button:hover {
     font-size: 75px;
     filter: drop-shadow(0 0 10px #fff);
     text-align: center;
-    
+
 
 }
 
@@ -166,14 +166,16 @@ section button:hover {
     border-radius: 20px;
     padding: 20px 35px;
     text-align: center;
-    margin-bottom:  80px;
+    margin-bottom: 80px;
 
 }
 
 .card img {
     height: 70px;
-    flex: 1; /* Ocupa o máximo de espaço disponível */
-    margin: 0 10px; /* Espaçamento entre os cards */
+    flex: 1;
+    /* Ocupa o máximo de espaço disponível */
+    margin: 0 10px;
+    /* Espaçamento entre os cards */
 }
 
 .card h5 {
@@ -214,11 +216,15 @@ section button:hover {
     display: flex;
     justify-content: space-around;
     margin-top: 80px;
-    max-width: 1200px; /* ou outro valor apropriado */
-    margin: 0 auto; /* Centraliza o conteúdo */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    max-width: 1200px;
+    /* ou outro valor apropriado */
+    margin: 0 auto;
+    /* Centraliza o conteúdo */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem para a próxima linha */
 
 }
+
 footer {
     background-color: #000000;
     padding-top: 100px;
@@ -246,10 +252,11 @@ footer p {
 
 }
 
-.social{
+.social {
     display: flex;
     gap: 40px;
 }
+
 .social img {
     height: 25px;
     border-radius: 50%;
@@ -263,10 +270,11 @@ footer p {
     align-items: center;
     justify-content: center;
     height: 50px;
-    width:  50px;
+    width: 50px;
     cursor: pointer;
 
 }
+
 .social a:hover {
     transform: scale(2.0);
     background-color: #A020F0;
@@ -278,9 +286,11 @@ footer p {
 
 
 @media only screen and (max-width: 768px) {
+
     /* Adicione estilos para telas menores que 768px */
     .caixa-principal {
-        background-size: cover; /* ou outro ajuste que você preferir */
+        background-size: cover;
+        /* ou outro ajuste que você preferir */
     }
 
     nav {
@@ -297,9 +307,11 @@ footer p {
     }
 
     section img {
-        width: 100%; /* Faça as imagens ocuparem a largura total do contêiner */
-        height: auto; /* Evite que as imagens se estiquem */
-        
+        width: 100%;
+        /* Faça as imagens ocuparem a largura total do contêiner */
+        height: auto;
+        /* Evite que as imagens se estiquem */
+
     }
 
     section h2 {
@@ -310,6 +322,3 @@ footer p {
 @media only screen and (max-width: 480px) {
     /* Adicione estilos para telas menores que 480px, se necessário */
 }
-
-
-
