@@ -12,6 +12,7 @@
     background-size: cover;
     background-position: center;
     background-color: #191919;
+    
 
 }
 
@@ -95,6 +96,9 @@ section img {
     height: 300px;
     margin: 0;
     filter: drop-shadow(0 0 10px #fff);
+    max-width: 100%;
+    height: auto;
+    
 
 }
 
@@ -165,6 +169,8 @@ section button:hover {
 
 .card img {
     height: 70px;
+    flex: 1; /* Ocupa o máximo de espaço disponível */
+    margin: 0 10px; /* Espaçamento entre os cards */
 }
 
 .card h5 {
@@ -205,6 +211,9 @@ section button:hover {
     display: flex;
     justify-content: space-around;
     margin-top: 80px;
+    max-width: 1200px; /* ou outro valor apropriado */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
 
 }
 footer {
@@ -261,3 +270,43 @@ footer p {
     border: 5px solid black;
     transition: 0.5s;
 }
+
+/* ajuda do chat gpt em baixo*/
+
+
+@media only screen and (max-width: 768px) {
+    /* Adicione estilos para telas menores que 768px */
+    .caixa-principal {
+        background-size: contain; /* ou outro ajuste que você preferir */
+    }
+
+    nav {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .meu-nome {
+        left: 3%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    section img {
+        width: 100%; /* Faça as imagens ocuparem a largura total do contêiner */
+        height: auto; /* Evite que as imagens se estiquem */
+        
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Adicione estilos para telas menores que 480px, se necessário */
+}
+
+
+
