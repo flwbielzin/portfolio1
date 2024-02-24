@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Shantell Sans", cursive;
+    text-decoration: none;
 }
 
 .caixa-principal {
@@ -12,20 +13,22 @@
     background-size: cover;
     background-position: center;
     background-color: #191919;
-     }
-     .caixa-principal h2{
-        color: #7CFC00;
-         text-align: left;
-         position: absolute;
-         top: 1%;
-         left: 45%;
-     }
-     .menu ul {
+}
+
+.caixa-principal h2 {
+    position: fixed;
+    color: #7CFC00;
+    text-align: left;
+    position: absolute;
     top: 1%;
     left: 45%;
-        
-     }
-   
+}
+
+.menu ul {
+    top: 1%;
+    left: 45%;
+
+}
 
 
 nav {
@@ -37,7 +40,7 @@ nav {
     padding-right: 24px;
     padding-top: 30px;
 }
-   
+
 
 .portfolio {
     color: #7CFC00;
@@ -45,9 +48,16 @@ nav {
     filter: drop-shadow(1 1 7px #fff)
 }
 
+.portfolio a {
+    color: #7CFC00;
+    position: fixed;
+}
+
 .portfolio span {
     color: #A020F0;
     font-size: 45px;
+    position: fixed;
+
 }
 
 li {
@@ -81,8 +91,9 @@ li:hover {
     text-align: center;
     font-family: "Shantell Sans", cursive;
     letter-spacing: 6px;
-    filter: drop-shadow(0 0 10px #fff)
 }
+
+
 
 .meu-nome h3 {
     color: #A020F0;
@@ -121,7 +132,7 @@ section h2 {
     font-style: italic;
     margin-left: 60px;
     font-family: "Shantell Sans", cursive;
-    filter: drop-shadow(0 0 10px #fff);
+
 }
 
 
@@ -165,8 +176,8 @@ section button:hover {
 .projetos h4 {
     color: white;
     font-size: 75px;
-    filter: drop-shadow(0 0 10px #fff);
     text-align: center;
+    line-height: 5cap;
 
 
 }
@@ -303,10 +314,10 @@ footer p {
     .caixa-principal {
         background-size: cover;
         background-image: url(./img/background.png);
-        
+
         /* ou outro ajuste que você preferir */
     }
-    
+
 
     nav {
         padding-left: 50px;
@@ -337,4 +348,3 @@ footer p {
 @media only screen and (max-width: 480px) {
     /* Adicione estilos para telas menores que 480px, se necessário */
 }
-
