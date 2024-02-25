@@ -10,8 +10,9 @@
     height: 100vh;
     width: 100%;
     background-image: url(./img/background.png);
-    background-size: cover;
-    background-position: center;
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: right center;
     background-color: #191919;
 }
 
@@ -24,13 +25,6 @@
     left: 45%;
 }
 
-.menu ul {
-    top: 1%;
-    left: 45%;
-
-}
-
-
 nav {
     display: flex;
     align-items: center;
@@ -39,10 +33,15 @@ nav {
     padding-right: 50px;
     padding-right: 24px;
     padding-top: 30px;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
 }
 
 
 .portfolio {
+    margin: 0;
     color: #7CFC00;
     font-size: 45px;
     filter: drop-shadow(1 1 7px #fff)
@@ -148,13 +147,14 @@ section p {
 section button {
     color: rgb(22, 20, 20);
     background: #7CFC00;
-    height: 45px;
+    height: 35px;
     width: 200px;
     font-size: 15px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     transition: 0.6s ease all;
+    
 }
 
 section button:hover {
@@ -162,7 +162,6 @@ section button:hover {
     border: 4px solid black;
     transition: 0.5s;
 }
-
 .projetos {
     background-color: #191919;
     padding-top: 80px;
@@ -312,39 +311,404 @@ footer p {
 
     /* Adicione estilos para telas menores que 768px */
     .caixa-principal {
-        background-size: cover;
-        background-image: url(./img/background.png);
-
-        /* ou outro ajuste que você preferir */
-    }
-
-
-    nav {
-        padding-left: 50px;
-        padding-right: 70px;
-    }
-
-    .meu-nome {
-        left: 3%;
-    }
-
-    h1 {
-        font-size: 40px;
-    }
-
-    section img {
+       background-image: url(./img/background.png);
+        height: 100vh;
         width: 100%;
-        /* Faça as imagens ocuparem a largura total do contêiner */
-        height: auto;
-        /* Evite que as imagens se estiquem */
-
+        background-position: 85%  90%;
+        background-color: #191919;
+        background-repeat: no-repeat;
+        background-size: 1%;
+        background-repeat: no-repeat;
+         /* ou outro ajuste que você preferir */
+}
+    .portfolio {
+        margin: 10px 0; /* Ajuste o valor de margin-top conforme necessário para mover para baixo */
+        color: #7CFC00;
+        font-size: 45px;
+        filter: drop-shadow(1 1 7px #fff);
+    }
+    
+    .meu-nome {
+        position: absolute;
+        top: 15%; /* Ajuste o valor conforme necessário para mover para cima */
+        left: 7%;
+    }
+    
+    
+    
+    .menu ul {
+        top: 1%;
+        left: 45%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+        position: absolute;
+        background-color: #191919;
+        border-radius: 10px;
+        flex-direction: column;
     }
 
-    section h2 {
-        font-size: 30px;
+    .menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .menu a {
+        color: white;
+        font-size: 25px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .menu a:hover {
+        color: #A020F0;
+        /* Cor desejada ao passar o cursor sobre o link */
+    }
+
+
+    .menu li {
+        margin: 15px;
+        margin-right: 20px;
+        color: white;
+        font-size: 25px;
+        margin: 15px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .menu li:hover {
+        color: #7CFC00;
+        transition: color 0.3s ease;
+    }
+
+    .menu li a {
+        color: white;
+        font-size: 25px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .menu li:hover a {
+        color: #A020F0;
+        /* Cor desejada ao passar o cursor sobre o link */
+        transition: color 0.3s ease;
+    }
+
+
+    /* Hamburger menu icon for smaller screens */
+    .menu-btn {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        align-items: flex-start;
+        margin-left: 35px;
+    }
+
+    .bar {
+        width: 35px;
+        height: 3px;
+        background-color: #A020F0;
+        margin: 3px 8px;
+    }
+
+    .submenu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #191919;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+        /* Adicione esta linha para exibir em colunas */
+    }
+
+    .submenu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        /* Adicione esta linha para exibir em colunas */
+    }
+
+    .submenu li {
+        margin: 5px 0;
+        /* Ajuste o espaçamento vertical aqui */
+    }
+
+    .submenu a {
+        color: #A020F0;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .menu:hover .submenu {
+        display: flex;
+        animation: fadeIn 0.3s forwards;
+        /* Adicione esta linha para um efeito de fade */
+        animation-delay: 0.3s;
+        /* Adicione um pequeno atraso para evitar que desapareça imediatamente */
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+
+
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .menu.show {
+        display: flex;
     }
 }
 
+
+nav {
+    padding-left: 50px;
+    padding-right: 70px;
+    position: relative;
+}
+
+.meu-nome {
+    left: 3%;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+section img {
+    width: 100%;
+    /* Faça as imagens ocuparem a largura total do contêiner */
+    height: auto;
+    /* Evite que as imagens se estiquem */
+
+}
+
+section h2 {
+    font-size: 30px;
+}
+
+
+@media only screen and (min-width: 769px) {
+    .menu {
+        display: flex !important;
+        /* !important é usado aqui para garantir que a regra seja aplicada */
+    }
+
+    .menu-btn {
+        display: none;
+    }
+}
+
+
 @media only screen and (max-width: 480px) {
+
     /* Adicione estilos para telas menores que 480px, se necessário */
+    .caixa-principal {
+        background-size: 200% auto;
+        background-position: right center ;
+        background-position-y: 100%; /* Ajuste o valor conforme necessário para descer a imagem */
+        background-image: url(./img/background.png);
+
+
+        /* ou outro ajuste que você preferir */
+    }
+    
+    .full-stack {
+        position: fixed;
+        color: #7CFC00;
+        text-align: right;
+        position: absolute;
+        top: 95%; /* Ajuste o valor para descer mais ou menos */
+        right: 5%;
+    }
+
+    .menu ul {
+        top: 1%;
+        left: 45%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+        position: absolute;
+        background-color: #191919;
+        border-radius: 10px;
+        flex-direction: column;
+    }
+
+    .menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .menu a {
+        color: white;
+        font-size: 25px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .menu a:hover {
+        color: #A020F0;
+        /* Cor desejada ao passar o cursor sobre o link */
+    }
+
+
+    .menu li {
+        margin: 15px;
+        margin-right: 20px;
+        color: white;
+        font-size: 25px;
+        margin: 15px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .menu li:hover {
+        color: #7CFC00;
+    }
+
+    .menu li a {
+        color: white;
+        font-size: 25px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .menu li:hover a {
+        color: #A020F0;
+        /* Cor desejada ao passar o cursor sobre o link */
+    }
+
+
+    /* Hamburger menu icon for smaller screens */
+    .menu-btn {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        align-items: flex-start;
+        margin-left: 35px;
+    }
+
+    .bar {
+        width: 35px;
+        height: 3px;
+        background-color: #A020F0;
+        margin: 3px 8px;
+    }
+
+    .submenu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #191919;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+        /* Adicione esta linha para exibir em colunas */
+    }
+
+    .submenu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        /* Adicione esta linha para exibir em colunas */
+    }
+
+    .submenu li {
+        margin: 5px 0;
+        /* Ajuste o espaçamento vertical aqui */
+    }
+
+    .submenu a {
+        color: #A020F0;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .menu:hover .submenu {
+        display: flex;
+        animation: fadeIn 0.3s forwards;
+        /* Adicione esta linha para um efeito de fade */
+        animation-delay: 0.3s;
+        /* Adicione um pequeno atraso para evitar que desapareça imediatamente */
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+
+
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+}
+
+
+nav {
+    padding-left: 50px;
+    padding-right: 70px;
+    position: relative;
+}
+
+.meu-nome {
+    left: 3%;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+section img {
+    width: 100%;
+    /* Faça as imagens ocuparem a largura total do contêiner */
+    height: auto;
+    /* Evite que as imagens se estiquem */
+
+}
+
+section h2 {
+    font-size: 30px;
 }

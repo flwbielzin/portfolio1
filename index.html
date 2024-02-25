@@ -37,11 +37,27 @@
                     <li><a href="#fale-comigo">Fale Comigo</a></li>
                 </ul>
             </nav>
+            <div class="submenu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos-id">Projetos</a></li>
+                    <li><a href="#fale-comigo">Fale Comigo</a></li>
+                </ul>
+            </div>
 
         </nav>
+        <div class="menu-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
         <div class="meu-nome">
             <h1>Gabriel Oliveira</h1>
-            <h3> Programador Full Stack</h3>
+            <div class="full-stack">
+                <h3> Programador Full Stack</h3>
+            </div>
         </div>
 
     </div>
@@ -51,7 +67,8 @@
         <h2 class="sobre1">Sobre mim</h2>
         <p class="subtitulo">Olá! Eu sou Gabriel Oliveira, Um programador Full Stack Buscando em cada vez mais na aréa,
             HTML, CSS, JavaScript, Python, Java, PHP e MySQL.</p>
-        <button><a href="#fale-comigo">Entre em contato</a></button>
+        <button class="falecomigo1"><a href="#fale-comigo">Entre em contato</a></button>
+        
 
         </div>
 
@@ -134,6 +151,29 @@
             </a>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuBtn = document.querySelector('.menu-btn');
+            const submenu = document.querySelector('.submenu');
+
+            menuBtn.addEventListener('mouseover', function () {
+                submenu.style.display = 'flex';
+            });
+
+            menuBtn.addEventListener('mouseout', function () {
+                submenu.style.display = 'none';
+            });
+
+            submenu.addEventListener('mouseover', function () {
+                submenu.style.display = 'flex';
+            });
+
+            submenu.addEventListener('mouseout', function () {
+                submenu.style.display = 'none';
+            });
+        });
+    </script>
 
 
 </body>
