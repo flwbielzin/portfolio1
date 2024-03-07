@@ -152,28 +152,36 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuBtn = document.querySelector('.menu-btn');
-            const submenu = document.querySelector('.submenu');
+    <!-- Adicione este script no final do seu arquivo HTML, antes do fechamento da tag </body> -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuBtn = document.querySelector('.menu-btn');
+        const menu = document.querySelector('.menu');
+        const submenu = document.querySelector('.submenu');
 
-            menuBtn.addEventListener('mouseover', function () {
-                submenu.style.display = 'flex';
-            });
-
-            menuBtn.addEventListener('mouseout', function () {
-                submenu.style.display = 'none';
-            });
-
-            submenu.addEventListener('mouseover', function () {
-                submenu.style.display = 'flex';
-            });
-
-            submenu.addEventListener('mouseout', function () {
-                submenu.style.display = 'none';
-            });
+        menuBtn.addEventListener('click', function () {
+            menu.classList.toggle('show');
+            submenu.style.display = 'none'; // Esconde o submenu ao clicar no botão de menu
         });
-    </script>
+
+        menu.addEventListener('mouseover', function () {
+            submenu.style.display = 'flex';
+        });
+
+        menu.addEventListener('mouseout', function () {
+            submenu.style.display = 'none';
+        });
+
+        submenu.addEventListener('mouseover', function () {
+            submenu.style.display = 'flex';
+        });
+
+        submenu.addEventListener('mouseout', function () {
+            submenu.style.display = 'none';
+        });
+    });
+</script>
+
 
 
 </body>
